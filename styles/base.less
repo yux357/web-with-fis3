@@ -1,0 +1,98 @@
+@import "images.less";
+
+.clearFloat{
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+
+.displayCenter-outer{
+	position: relative;
+	left: 50%;
+	float: left;
+}
+
+.displayCenter-inner{
+	position: relative;
+	left: -50%;
+	float: left;
+}
+.textEllipsis{
+	display: block;
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.unSelect{
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -khtml-user-select: none;  
+    -ms-user-select: none;    
+    /* 以下两个属性目前并未支持，写在这里为了减少风险 */
+    -o-user-select: none;
+    user-select: none;  
+}
+
+.canSelect{
+    -webkit-user-select: auto; 
+    -moz-user-select: auto;    
+    -khtml-user-select: auto;  
+    -ms-user-select: auto;    
+    /* 以下两个属性目前并未支持，写在这里为了减少风险 */
+    -o-user-select: auto;
+    user-select: auto;  
+}
+
+.animate(@second){
+	transition: all @second;
+	-moz-transition: all @second;	/* Firefox 4 */
+	-webkit-transition: all @second;	/* Safari 和 Chrome */
+	-o-transition: all @second;
+}
+
+.borderRadius(@radius){
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+.imagesScaledDown(@width,@height,@borderWidth,@borderColor){
+	width: @width + @borderWidth * 2;
+	height:  @height + @borderWidth * 2;
+	position: relative;
+	zoom: 1;
+
+	>.imagesScaledDown-border{
+		width: @width;
+		height: @height;
+		border: @borderWidth solid @borderColor;
+		cursor: pointer;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		background-color: #fff;
+
+		>.imagesScaledDown-link{
+			width: @width;
+			height: @height;
+			cursor: pointer;
+			text-align: center;
+			display: table-cell;
+			vertical-align: middle;
+			background-color: #fff;
+			*display: block;
+			*font-size: @height * 0.8625;
+			*font-family: Arial;
+
+			>.imagesScaledDown-pic{
+				max-width: @width;
+				max-height: @height;
+				vertical-align: middle;
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-cn">
+	<!--<![endif]-->
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE"><!--以IE模式渲染-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<title>时间控件</title>
+		
+		<link href="../../styles/reset.css" type="text/css" rel="stylesheet">
+		<link href="calendar.css" type="text/css" rel="stylesheet">
+			
+		<script type="text/javascript" data-main="" src="../../libs/require.js"></script>
+		<script type="text/javascript" src="../../libs/config.js"></script>
+		<script type="text/javascript">
+			require(['calendar_mod'], function(calendar) {
+	        	/**
+				* target：获取时间的元素;
+				* strFormat：日期格式;
+				* type：0--只选择日期，1--选择小时、分钟、秒，2--选择小时、分钟，3--选择小时，4--选择上、下午;
+				* tLimit：0--无限制，1--只能选择当天或者之前的日期，2--只能选择当天或者之后的日期
+				* lang：0--中文，1--英文
+				*/
+				/**
+				 * show_Calendar(target,strFormat,type,tLimit,lang);
+				 */
+				
+				$("body").on("click",".js-date",function()
+				{
+					show_Calendar(this,'',1,0,0);
+				});
+	        });
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		<input type="text" readonly class="js-date" value="" style="border:1px solid #ddd;">
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

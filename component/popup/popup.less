@@ -1,0 +1,410 @@
+
+/************************************
+	plugins-floatinglayer 浮出层
+************************************/
+.plugins-floatinglayer{
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+.plugins-floatinglayer__bg{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1000;
+	-moz-opacity: 0.2;
+	opacity: .20;
+	filter: alpha(opacity=20);
+}
+.plugins-floatinglayer__box{
+	position: absolute;
+	z-index: 10010;
+}
+
+
+.popup_opt_box{
+	width: 600px;
+	height: auto;
+}
+
+.js-popupWidth{
+	width:560px;
+}
+
+.js-popupCHeight{
+	min-height:30px;
+}
+
+.popup_opt_box__head{
+	cursor:move;
+	zoom:1;
+}
+.popup_opt_box__head:after {
+	content: '.';
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	display: block;
+	clear: both;
+}
+
+.popup_opt_box__head-l,
+.popup_opt_box__head-r{
+	float: left;
+	width:20px;
+	height:60px;
+}
+.popup_opt_box__head-l{
+	background:url(images/popup_pop_top_l.png) left top no-repeat;
+}
+.popup_opt_box__head-c{
+	float: left;
+	height:50px;
+	padding-top:10px;
+	background:url(images/popup_pop_top_c.png) left top repeat-x;
+}
+.popup_opt_box__head-r{
+	background:url(images/popup_pop_top_r.png) right top no-repeat;
+}
+
+.popup_opt_box__head--title{
+	float: left;
+	width: auto;
+	height: auto;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 50px;
+	padding-left: 10px;
+	color: #fff;
+}
+
+.popup_opt_box__head--close{
+	float:right;
+	cursor:pointer;
+	width: 29px;
+	height: 29px;
+	margin:10px 0 0 0;
+	background:url(images/popup_pop_close.png) center center no-repeat;
+}
+
+.popup_opt_box__con{
+	height:auto;
+	zoom:1;
+}
+.popup_opt_box__con:after {
+	content: '.';
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	display: block;
+	clear: both;
+}
+
+.popup_opt_box__con-l,
+.popup_opt_box__con-r{
+	float: left;
+	width:11px;
+}
+.popup_opt_box__con-c{
+	float: left;
+	background:#fff;
+}
+.popup_opt_box__con-l{
+	background:url(images/popup_pop_cen_l.png) left top repeat-y;
+}
+.popup_opt_box__con-r{
+	background:url(images/popup_pop_cen_r.png) right top repeat-y;
+}
+
+.popup_optb__con{
+	width: 100%;
+	height: auto;
+	zoom:1;
+}
+/*
+.popup_optb__but{
+	padding: 15px 0 0 0;
+	zoom:1;
+}
+.popup_optb__but:after{
+	content: '.';
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	display: block;
+	clear: both;
+}
+*/
+.popup_opt_box__foot{
+	width:100%;
+	height:18px;
+}
+.popup_opt_box__foot-l,
+.popup_opt_box__foot-r{
+	float: left;
+	width:20px;
+	height:18px;
+}
+.popup_opt_box__foot-l{
+	background:url(images/popup_pop_bot_l.png) left top no-repeat;
+}
+.popup_opt_box__foot-c{
+	float: left;
+	height:18px;
+	background:url(images/popup_pop_bot_c.png) left top repeat-x;
+}
+.popup_opt_box__foot-r{
+	background:url(images/popup_pop_bot_r.png) right top no-repeat;
+}
+
+
+
+/************************************
+	pop-up-alert 基础弹出框
+************************************/
+
+.pop-up-alert
+{
+	position:relative;
+	width: 467px;
+	height: 100%;
+}
+
+.pop-up-alert__cancel
+{
+	position:absolute;
+	cursor: pointer;
+	float: right;
+	top:20px;
+	right:30px;
+	width: 34px;
+	height: 34px;
+	background: url(images/popup/pop-up_close.png) left top no-repeat;
+}
+
+.pop-up-alert__head
+{
+	cursor: move;
+	width: 100%;
+	height: auto;
+	padding: 23px 0px 8px 0px;
+	background: url(images/popup/pop-up_box.png) left top no-repeat;
+}
+
+.pop-up-alert__headtips
+{
+	width: 60px;
+	height: 43px;
+	padding-left: 55px;
+	font-size: 24px;
+	color: #333333;
+	line-height:43px;
+	margin:0 auto;
+}
+
+.alert__headtipsYes
+{
+	background: url(images/popup/pop-up_true.png) left top no-repeat;
+}
+.alert__headtipsNo
+{
+	background: url(images/popup/pop-up_false.png) left top no-repeat;
+}
+
+.pop-up-alert__botmode 
+{
+	width: 100%;
+	height: 30px;
+	background: url(images/popup/pop-up_box.png) left bottom no-repeat;
+}
+
+.pop-up-alert__content
+{
+	width: 450px;
+	height: auto;
+	padding: 0px 9px 0px 8px;
+	background: url(images/popup/pop-up_cbox.png) left top repeat-y;
+}
+
+.pop-up-alert__content--head
+{
+	width: 100%;
+	height: 11px;
+	background: url(images/popup/pop-up_line.png) center top no-repeat;
+}
+.alert__content--headYes
+{
+	border-bottom:2px solid #5bc3ff;
+}
+
+.alert__content--headNo
+{
+	border-bottom:2px solid #f96758;
+}
+
+.pop-up-alert__con
+{
+	width: 340px;
+	height: auto;
+	padding: 25px 55px;
+	margin: 0 auto;
+}
+
+.pop-up-alert__con--text
+{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.pop-up-alert__button
+{
+	width: 100%;
+	height: auto;
+	background: url(images/popup/pop-up_cbox.png) left top repeat-y;
+}
+
+.pop-up-alert__button--confirm
+{
+	margin:0px 10px;
+	cursor: pointer;
+	width: 97px;
+	height: 30px;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	border: 0px;
+	color: #ffffff;
+	background-image: url(images/popup/pop-up_but_blue_97-30.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+
+
+/************************************
+    pop-up-code 验证码弹出框
+************************************/
+
+.pop-up-code{
+    position:relative;
+    width: 297px;
+    height: 100%;
+    &__cancel{
+        position:absolute;
+        cursor: pointer;
+        float: right;
+        top:15px;
+        right:15px;
+        width: 24px;
+        height: 24px;
+        background: url(images/popup_pop_code_icon.png) -310px -16px no-repeat;
+    }
+    &__head{
+        cursor: move;
+        height: auto;
+        padding: 15px 4px 0 4px;
+        background: url(images/popup_pop_code_icon.png) left top no-repeat;
+        &--tips{
+            padding-bottom:10px;
+            display:block;
+            width: 100%;
+            height: auto;
+            font-size:16px;
+            line-height:24px;
+            font-weight:bold;
+            color:#333;
+            text-align:center;
+            border-bottom:1px solid #47aaf6;
+        }
+    }
+    &__content{
+        height: auto;
+        //padding: 20px 29px 10px 29px;
+        padding: 20px 0 10px 29px;
+        zoom:1;
+        background: url(images/popup_pop_code_c.png) left top repeat-y;
+        &:after{
+            content: '.';
+            display: block;
+            clear: both;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+        }
+        
+        &--input{
+            float: left;
+            width: 95px;
+            height: 28px;
+            border: 1px solid #ccc;
+            line-height: 28px;
+            padding: 0px 10px;
+        }
+        &--code{
+            float: left;
+            width: auto;
+            height: auto;
+            margin-left: 5px;
+            &--img{
+                cursor: pointer;
+                float: left;
+                width: 90px;
+                height: 30px;
+                margin: 0px 5px 0px 0px;
+            }
+            &--i{
+                cursor: pointer;
+                float: left;
+                width: 20px;
+                width: 20px;
+                height: 20px;
+                margin: 10px 0px 0px 0px;
+                background: url(images/popup_pop_code_reload.png) center center no-repeat;
+            }
+        }
+        &--msg{
+            float: left;
+            width: 100%;
+            height: 25px;
+            >i{
+                float: left;
+                font-size: 12px;
+                line-height: 20px;
+                color: #ff0000;
+            }
+        }
+        
+        
+    }
+    &__button{
+        width: 100%;
+        height: auto;
+        background: url(images/popup_pop_code_c.png) left top repeat-y;
+        &--confirm{
+            margin:0px 10px;
+            cursor: pointer;
+            width: 102px;
+            height: 37px;
+            font-size: 14px;
+            line-height: 36px;
+            text-align: center;
+            border: 0px;
+            color: #ffffff;
+            background-image: url(images/popup_pop_code_but.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+    &__botmode{
+        width: 100%;
+        height: 30px;
+        background: url(images/popup_pop_code_icon.png) left bottom no-repeat;
+    }
+}
+ 

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+
+   		 require(['pagination_mod'], function(p) {
+            var a = p.init({
+           		"count" : 200,
+           		"page" : 2,
+           		"perpage" : 10,
+           		"totalPage" : 20,
+           		"pageText" : ''
+           })
+
+           $("body").append(a);
+        });
+
+    </script>
